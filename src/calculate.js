@@ -1,8 +1,10 @@
-export function calculateTotal(purchases, applyDiscount) {
+export default function calculateTotal(purchases, applyDiscount) {
   const sum = purchases.reduce((acc, p) => {
-    return acc += p.count * p.price;
+    // eslint-disable-next-line no-param-reassign
+    acc += p.count * p.price;
+    return acc;
   }, 0);
-  
+
   if (applyDiscount) {
     return sum * 0.891;
   }
