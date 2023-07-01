@@ -3,9 +3,9 @@ stack: node 12
 branches:
   only:
     - main
-  cache: node_modules
-  install: 
-    - npm installl
-  build: off
-  test_script:
-    - npm run lint && npm test
+cache: node_modules
+install: 
+  - npm installl
+build: off
+test_script:
+  - npm run lint && npm test
